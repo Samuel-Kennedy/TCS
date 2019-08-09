@@ -24,7 +24,7 @@ public abstract class Veiculo{
         }
     }
     void Acelerar(){
-        if(this.motor == true &&this. abastecer > 0){
+        if(this.motor == true && this. abastecer > 0){
             this.acelerar = acelerar + 10;
             this.resultado = this.abastecer - this.acelerar;            
             System.out.println("Você acelerou, sua gasolina está em " + this.resultado);
