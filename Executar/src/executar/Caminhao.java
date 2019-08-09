@@ -12,6 +12,6 @@ public class Caminhao extends Veiculo {
             System.out.println("Modelo: " + this.modelo);            
             System.out.println("Preço da Gasolina: " + this.preco + " Reais" );             
             System.out.println("Ano: " + this.ano);
-            System.out.println("O tanque está em: " + this.gasosa);            
+            System.out.println("O tanque está em: " + this.abastecer);            
         }
 }

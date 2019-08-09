@@ -21,6 +21,7 @@ public class Executar {
         System.out.println("                          2 - Carro");
         System.out.println("                          3 - Moto");
         System.out.println("                          0 - Feche o sistema");
+        System.out.println("                          Digite um número");
         Scanner sc = new Scanner(System.in);
         recebe = sc.nextInt();  
         switch(recebe){            
@@ -34,6 +35,7 @@ public class Executar {
                     System.out.println("                          8 - Desligar");
                     System.out.println("                          9 - Status");
                     System.out.println("                          10 - Volte ao menu principal");
+                    System.out.println("                          Digite um número");
                     Scanner sp = new Scanner(System.in);
                     recebe1 = sp.nextInt();
             
@@ -72,6 +74,7 @@ public class Executar {
                     System.out.println("                          8 - Desligar");
                     System.out.println("                          9 - Status");
                     System.out.println("                          10 - Volte ao menu principal");
+                    System.out.println("                          Digite um número");
                     Scanner scc = new Scanner(System.in);
                     recebe2 = scc.nextInt();
                     
@@ -108,6 +111,7 @@ public class Executar {
                     System.out.println("                          8 - Desligar");
                     System.out.println("                          9 - Status");
                     System.out.println("                          10 - Volte ao menu principal");
+                    System.out.println("                          Digite um número");
                     Scanner sl = new Scanner(System.in);
                     recebe3 = sl.nextInt();
                     

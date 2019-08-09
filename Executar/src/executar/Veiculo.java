@@ -1,35 +1,38 @@
 package executar;
 import java.util.Scanner;
 
-public abstract class Veiculo {    
+public abstract class Veiculo implements InterfaceZinha{    
     protected float preco = 4;
-    protected int abastecer = 50; 
-    protected int acelerar = 10;
+    protected int abastecer; 
     protected boolean motor;        
-    protected int resultado;
-    protected int gasosa;
     protected boolean rodas = false;
     
-    void Abastecer(){
+    @Override
+    public void Abastecer(){               
         if(this.motor == true){
-            System.out.println("Desligue o seu carro para abastecer");
+            System.out.println("Desligue o seu veiculo para abastecer");
+        }
+        else if(abastecer >= 50){
+            System.out.println("O tanque está cheio");
         }
         else{
-        System.out.println("O tanque foi abastecido com " + abastecer + " Reais");
-        gasosa = abastecer;
+            this.abastecer +=  10;
+            System.out.println("O tanque foi abastecido com " + abastecer + " Reais");         
         }
     }
-    void Acelerar(){
-        if(this.motor == true){
-            this.resultado = this.abastecer - this.acelerar;
-            System.out.println("Você acelerou, sua gasolina está em " + resultado);
+    @Override
+    public void Acelerar(){
+        if(this.motor == true && this.abastecer > 0){
+           this.abastecer -= 10;            
+            System.out.println("Você acelerou, sua gasolina está em " + this.abastecer);
         }
         else{
-            System.out.println("O MOTOR ESTÁ DESLIGADO!!!!!!!!! PARA ACELERAR, VOCÊ DEVE LIGAR O CARRO!!!!");
+            System.out.println("O MOTOR ESTÁ DESLIGADO!!!!!!!!! OU VOCÊ ESTÁ SEM GASOLINA!!!");
         }
     }
     
-    void Roda(){
+    @Override
+    public void Roda(){
         if(rodas == true){
             System.out.println("O PNEU ESTÁ FURADO!!!!!");
         }
@@ -38,7 +41,8 @@ public abstract class Veiculo {
         }
     }
     
-    void Ligar(){       
+    @Override
+    public void Ligar(){       
         this.motor = true;
         if(this.motor == true){
             System.out.println("O motor está ligado");
@@ -48,7 +52,8 @@ public abstract class Veiculo {
         }
         
         }
-    void Desligar(){
+    @Override
+    public void Desligar(){
         this.motor = false;
         if(this.motor == false){
             System.out.println("O motor está desligado");
@@ -57,4 +62,5 @@ public abstract class Veiculo {
             System.out.println("O motor está ligado");
         }
     }
+    
 }

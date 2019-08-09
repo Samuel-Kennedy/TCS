@@ -11,7 +11,6 @@ public class Carro extends Veiculo {
             System.out.println("Modelo: " + this.modelo);            
             System.out.println("Preço: " + this.preco);             
             System.out.println("Ano: " + this.ano);
-            System.out.println("Rodas: " + this.rodas);
-            System.out.println("O tanque está em: " + this.gasosa);            
+            System.out.println("O tanque está em: " + this.abastecer);            
         }
 }
